@@ -15,6 +15,12 @@ const products: Product[] = [
   { id: 4, title: 'Материнская плата Z690', price: '17990 ₽', desc: 'Поддержка PCIe 4.0' },
   { id: 5, title: 'Блок питания 750W', price: '6990 ₽', desc: 'Надёжный и тихий' },
   { id: 6, title: 'Оперативная память 32GB', price: '15990 ₽', desc: '3200MHz CL16' },
+  { id: 7, title: 'Видеокарта RTX 4070', price: '69990 ₽', desc: 'Высокая производительность' },
+  { id: 8, title: 'Процессор Ryzen 7', price: '42990 ₽', desc: '8 ядер, 16 потоков' },
+  { id: 9, title: 'SSD 1TB NVMe', price: '8990 ₽', desc: 'Быстрые загрузки' },
+  { id: 10, title: 'Материнская плата Z690', price: '17990 ₽', desc: 'Поддержка PCIe 4.0' },
+  { id: 11, title: 'Блок питания 750W', price: '6990 ₽', desc: 'Надёжный и тихий' },
+  { id: 12, title: 'Оперативная память 32GB', price: '15990 ₽', desc: '3200MHz CL16' },
 ]
 
 function App() {
