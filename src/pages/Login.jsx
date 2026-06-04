@@ -20,11 +20,11 @@ export default function Login() {
   return (
     <main className="section">
       <div className="container auth">
-        <h2>Sign in</h2>
-        <p>Welcome back. Access your cart and saved builds.</p>
+        <h2>Вход</h2>
+        <p>Добро пожаловать. Доступ к корзине и сохранённым сборкам.</p>
         <form onSubmit={handleSubmit} className="form">
           <label>
-            Email
+            Электронная почта
             <input
               type="email"
               value={form.email}
@@ -33,7 +33,7 @@ export default function Login() {
             />
           </label>
           <label>
-            Password
+            Пароль
             <input
               type="password"
               value={form.password}
@@ -42,10 +42,10 @@ export default function Login() {
             />
           </label>
           {error && <p className="error">{error}</p>}
-          <button className="btn btn--primary" type="submit">Sign in</button>
+          <button className="btn btn--primary" type="submit">Войти</button>
         </form>
         <p className="hint">
-          New here? <Link to="/register">Create an account</Link>
+          Нет аккаунта? <Link to="/register">Зарегистрироваться</Link>
         </p>
       </div>
     </main>

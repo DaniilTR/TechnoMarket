@@ -20,7 +20,7 @@ export default function Product() {
   }, [slug])
 
   if (loading) {
-    return <main className="section"><div className="container">Loading...</div></main>
+    return <main className="section"><div className="container">Загрузка...</div></main>
   }
 
   if (error) {
@@ -28,7 +28,7 @@ export default function Product() {
   }
 
   if (!product) {
-    return <main className="section"><div className="container">Not found.</div></main>
+    return <main className="section"><div className="container">Товар не найден.</div></main>
   }
 
   return (
@@ -44,20 +44,20 @@ export default function Product() {
           <div className="product-page__price">${product.price}</div>
           <div className="product-page__actions">
             <button className="btn btn--primary" onClick={() => addItem(product, 1)}>
-              Add to cart
+              Добавить в корзину
             </button>
             {!user && (
-              <span className="hint">Sign in to sync your cart across devices.</span>
+              <span className="hint">Войдите, чтобы синхронизировать корзину между устройствами.</span>
             )}
           </div>
           <div className="specs">
-            <h4>Specs</h4>
+            <h4>Характеристики</h4>
             <ul>
               {Object.entries(product.specs || {}).map(([key, value]) => (
-                <li key={key}>
-                  <strong>{key}:</strong> {value}
-                </li>
-              ))}
+                  <li key={key}>
+                    <strong>{key}:</strong> {value}
+                  </li>
+                ))}
             </ul>
           </div>
         </div>

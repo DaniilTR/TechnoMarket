@@ -14,12 +14,12 @@ export default function ProductCard({ product }) {
         <p>{product.shortDescription}</p>
         <div className="product-card__meta">
           <span className="price">${product.price}</span>
-          <span className="stock">{product.stock} in stock</span>
+          <span className="stock">{product.stock} шт.</span>
         </div>
         <div className="product-card__actions">
-          <Link className="btn btn--ghost" to={`/product/${product.slug}`}>Details</Link>
+          <Link className="btn btn--ghost" to={`/product/${product.slug}`}>Подробнее</Link>
           <button className="btn btn--primary" onClick={() => addItem(product, 1)}>
-            Add to cart
+            Добавить в корзину
           </button>
         </div>
       </div>

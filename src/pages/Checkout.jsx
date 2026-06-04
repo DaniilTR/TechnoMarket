@@ -3,11 +3,11 @@ export default function Checkout() {
     <main className="section">
       <div className="container">
         <div className="section__head">
-          <h2>Checkout</h2>
-          <p>This demo stops before payment.</p>
+          <h2>Оформление заказа</h2>
+          <p>В этой демонстрации оплата не подключена.</p>
         </div>
         <div className="note-card">
-          <p>We can add payment integration when you are ready.</p>
+          <p>Можем подключить платёжные системы по запросу.</p>
         </div>
       </div>
     </main>

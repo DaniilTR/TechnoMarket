@@ -7,16 +7,16 @@ export default function Account() {
     <main className="section">
       <div className="container">
         <div className="section__head">
-          <h2>Account</h2>
-          <p>Profile details and saved builds.</p>
+          <h2>Аккаунт</h2>
+          <p>Данные профиля и сохранённые сборки.</p>
         </div>
         {user ? (
           <div className="note-card">
-            <p>Name: {user.name}</p>
-            <p>Email: {user.email}</p>
+            <p>Имя: {user.name}</p>
+            <p>Почта: {user.email}</p>
           </div>
         ) : (
-          <p className="error">Please sign in to view your account.</p>
+          <p className="error">Пожалуйста, войдите, чтобы просмотреть аккаунт.</p>
         )}
       </div>
     </main>

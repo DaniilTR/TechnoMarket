@@ -41,7 +41,7 @@ router.get('/', async (req, res) => {
 router.post('/items', async (req, res) => {
   const { productId, quantity } = req.body
   if (!productId || !quantity) {
-    return res.status(400).json({ message: 'Missing fields' })
+    return res.status(400).json({ message: 'Не указаны обязательные поля' })
   }
 
   await query(
@@ -60,7 +60,7 @@ router.patch('/items/:id', async (req, res) => {
   const { quantity } = req.body
   const itemId = Number(req.params.id)
   if (!quantity || Number.isNaN(itemId)) {
-    return res.status(400).json({ message: 'Invalid request' })
+    return res.status(400).json({ message: 'Неверный запрос' })
   }
 
   if (quantity <= 0) {

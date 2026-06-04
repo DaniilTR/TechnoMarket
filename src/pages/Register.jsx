@@ -20,11 +20,11 @@ export default function Register() {
   return (
     <main className="section">
       <div className="container auth">
-        <h2>Create account</h2>
-        <p>Save builds, track orders, and sync carts.</p>
+        <h2>Регистрация</h2>
+        <p>Сохраняйте сборки, отслеживайте заказы и синхронизируйте корзину.</p>
         <form onSubmit={handleSubmit} className="form">
           <label>
-            Name
+            Имя
             <input
               type="text"
               value={form.name}
@@ -33,7 +33,7 @@ export default function Register() {
             />
           </label>
           <label>
-            Email
+            Электронная почта
             <input
               type="email"
               value={form.email}
@@ -42,7 +42,7 @@ export default function Register() {
             />
           </label>
           <label>
-            Password
+            Пароль
             <input
               type="password"
               value={form.password}
@@ -51,10 +51,10 @@ export default function Register() {
             />
           </label>
           {error && <p className="error">{error}</p>}
-          <button className="btn btn--primary" type="submit">Create account</button>
+          <button className="btn btn--primary" type="submit">Создать аккаунт</button>
         </form>
         <p className="hint">
-          Already have an account? <Link to="/login">Sign in</Link>
+          Уже есть аккаунт? <Link to="/login">Войти</Link>
         </p>
       </div>
     </main>

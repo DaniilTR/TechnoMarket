@@ -48,7 +48,7 @@ app.use('/api/cart', cartRoutes)
 
 app.use((err, req, res, next) => {
   console.error(err)
-  res.status(500).json({ message: 'Server error' })
+  res.status(500).json({ message: 'Ошибка сервера' })
   next()
 })
 

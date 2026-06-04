@@ -1,60 +1,61 @@
 # TechnoMarket
-Full-stack demo store for PC components.
+Демо-магазин комплектующих (Full-stack).
 
-## Stack
-- Frontend: React + Vite + React Router
-- Backend: Node.js + Express + PostgreSQL
-- Auth: session cookies
+## Стек
+- Фронтенд: React + Vite + React Router
+- Бэкенд: Node.js + Express + PostgreSQL
+- Аутентификация: сессии (cookie)
 
-## Frontend setup
+## Запуск фронтенда
+В корне проекта:
 ```bash
 npm install
 npm run dev
 ```
-The app runs on `http://localhost:5173`.
+Фронтенд доступен по `http://localhost:5173`.
 
-## Backend setup
+## Запуск бэкенда
 ```bash
 cd server
 npm install
 cp .env.example .env
 ```
 
-Create a PostgreSQL database (example name: `technomarket`). Then run the SQL files:
+Создайте базу PostgreSQL (например `technomarket`), затем примените схему и сиды:
 ```bash
 psql "$DATABASE_URL" -f sql/schema.sql
 psql "$DATABASE_URL" -f sql/seed.sql
 ```
 
-Start the API server:
+Запустите сервер API:
 ```bash
 npm run dev
 ```
-The API runs on `http://localhost:3001`.
+API по умолчанию на `http://localhost:3001`.
 
-## Environment variables
-See [server/.env.example](server/.env.example) for required values:
+## .env
+Скопируйте и заполните `server/.env.example`:
 - `DATABASE_URL`
 - `SESSION_SECRET`
 - `PORT`
 - `CLIENT_ORIGIN`
 
-## Routes
-Frontend:
-- `/` home
-- `/catalog` catalog
-- `/product/:slug` product details
-- `/cart` cart
-- `/login` and `/register` auth
+## Маршруты
+Фронтенд:
+- `/` — главная
+- `/catalog` — каталог
+- `/product/:slug` — карточка товара
+- `/cart` — корзина
+- `/login` и `/register` — вход/регистрация
 
-Backend:
+Бэкенд API:
 - `GET /api/products`
 - `GET /api/products/:slug`
 - `POST /api/auth/register`
 - `POST /api/auth/login`
 - `POST /api/auth/logout`
 - `GET /api/auth/me`
-- `GET /api/cart`
+- `GET /api/cart` (только для авторизованных)
 - `POST /api/cart/items`
 - `PATCH /api/cart/items/:id`
 - `DELETE /api/cart/items/:id`

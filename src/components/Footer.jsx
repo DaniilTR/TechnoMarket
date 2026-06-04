@@ -4,22 +4,22 @@ export default function Footer() {
       <div className="container footer__inner">
         <div>
           <h3>TechnoMarket</h3>
-          <p>PC parts for builders, creators, and gamers.</p>
+          <p>Комплектующие для сборщиков, создателей и геймеров.</p>
         </div>
         <div>
-          <h4>Store</h4>
+          <h4>Магазин</h4>
           <ul>
-            <li>Delivery in 24-48 hours</li>
-            <li>Compatibility check</li>
-            <li>14-day returns</li>
+            <li>Доставка 24–48 часов</li>
+            <li>Проверка совместимости</li>
+            <li>Возврат 14 дней</li>
           </ul>
         </div>
         <div>
-          <h4>Contact</h4>
+          <h4>Контакты</h4>
           <ul>
             <li>hello@technomarket.com</li>
             <li>+1 (800) 555-0199</li>
-            <li>Mon-Sun 09:00-20:00</li>
+            <li>Ежедневно 09:00–20:00</li>
           </ul>
         </div>
       </div>

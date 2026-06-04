@@ -8,13 +8,13 @@ export default function Cart() {
     <main className="section">
       <div className="container cart">
         <div className="section__head">
-          <h2>Your cart</h2>
-          <p>Review items before checkout.</p>
+          <h2>Ваша корзина</h2>
+          <p>Проверьте товары перед оформлением заказа.</p>
         </div>
         {items.length === 0 ? (
           <div className="empty">
-            <p>Your cart is empty.</p>
-            <Link className="btn btn--primary" to="/catalog">Browse catalog</Link>
+            <p>В корзине нет товаров.</p>
+            <Link className="btn btn--primary" to="/catalog">В каталог</Link>
           </div>
         ) : (
           <div className="cart__grid">
@@ -33,19 +33,19 @@ export default function Cart() {
                       <span>{item.quantity}</span>
                       <button onClick={() => updateQuantity(item.id || item.productId, item.quantity + 1)}>+</button>
                     </div>
-                    <button className="link" onClick={() => removeItem(item.id || item.productId)}>Remove</button>
+                    <button className="link" onClick={() => removeItem(item.id || item.productId)}>Удалить</button>
                   </div>
                 )
               })}
             </div>
             <div className="cart__summary">
-              <h3>Summary</h3>
+              <h3>Итог</h3>
               <div className="summary__row">
-                <span>Total</span>
+                <span>Всего</span>
                 <strong>${total.toFixed(2)}</strong>
               </div>
-              <Link className="btn btn--primary" to="/checkout">Checkout</Link>
-              <button className="btn btn--ghost" onClick={clearCart}>Clear cart</button>
+              <Link className="btn btn--primary" to="/checkout">Оформить заказ</Link>
+              <button className="btn btn--ghost" onClick={clearCart}>Очистить корзину</button>
             </div>
           </div>
         )}

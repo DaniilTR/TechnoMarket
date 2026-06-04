@@ -3,21 +3,21 @@ export default function Support() {
     <main className="section">
       <div className="container">
         <div className="section__head">
-          <h2>Support</h2>
-          <p>Ask builders about compatibility, BIOS, or tuning.</p>
+          <h2>Поддержка</h2>
+          <p>Спросите сборщиков про совместимость, BIOS или настройку.</p>
         </div>
         <div className="support-grid">
           <div className="support-card">
-            <h3>Compatibility check</h3>
-            <p>Socket, chipset, case fit, and PSU validation.</p>
+            <h3>Проверка совместимости</h3>
+            <p>Socket, чипсет, посадочные размеры и ПСУ.</p>
           </div>
           <div className="support-card">
-            <h3>Guided build</h3>
-            <p>Step-by-step help for first-time builders.</p>
+            <h3>Помощь со сборкой</h3>
+            <p>Пошаговая помощь для начинающих сборщиков.</p>
           </div>
           <div className="support-card">
-            <h3>RMA assistance</h3>
-            <p>We handle manufacturer communication.</p>
+            <h3>Помощь с RMA</h3>
+            <p>Мы помогаем с коммуникацией с производителем.</p>
           </div>
         </div>
       </div>

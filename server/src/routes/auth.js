@@ -19,12 +19,12 @@ router.get('/me', async (req, res) => {
 router.post('/register', async (req, res) => {
   const { name, email, password } = req.body
   if (!name || !email || !password) {
-    return res.status(400).json({ message: 'Missing fields' })
+    return res.status(400).json({ message: 'Не указаны обязательные поля' })
   }
 
   const existing = await query('SELECT id FROM users WHERE email = $1', [email])
   if (existing.rows.length > 0) {
-    return res.status(409).json({ message: 'Email already registered' })
+    return res.status(409).json({ message: 'E-mail уже зарегистрирован' })
   }
 
   const passwordHash = await bcrypt.hash(password, 10)
@@ -40,7 +40,7 @@ router.post('/register', async (req, res) => {
 router.post('/login', async (req, res) => {
   const { email, password } = req.body
   if (!email || !password) {
-    return res.status(400).json({ message: 'Missing fields' })
+    return res.status(400).json({ message: 'Не указаны обязательные поля' })
   }
 
   const result = await query(
@@ -49,12 +49,12 @@ router.post('/login', async (req, res) => {
   )
   const user = result.rows[0]
   if (!user) {
-    return res.status(401).json({ message: 'Invalid credentials' })
+    return res.status(401).json({ message: 'Неверные учётные данные' })
   }
 
   const match = await bcrypt.compare(password, user.password_hash)
   if (!match) {
-    return res.status(401).json({ message: 'Invalid credentials' })
+    return res.status(401).json({ message: 'Неверные учётные данные' })
   }
 
   req.session.userId = user.id

@@ -26,19 +26,19 @@ export default function Catalog() {
     <main className="section">
       <div className="container">
         <div className="section__head">
-          <h2>Catalog</h2>
-          <p>Pick parts for your next build. Stock updates in real time.</p>
+          <h2>Каталог</h2>
+          <p>Выбирай детали для следующей сборки. Запасы обновляются в реальном времени.</p>
         </div>
         <div className="catalog__controls">
           <input
             type="text"
-            placeholder="Search components"
+            placeholder="Поиск комплектующих"
             value={query}
             onChange={(event) => setQuery(event.target.value)}
           />
-          <span>{filtered.length} items</span>
+          <span>{filtered.length} товаров</span>
         </div>
-        {loading && <p>Loading catalog...</p>}
+        {loading && <p>Загрузка каталога...</p>}
         {error && <p className="error">{error}</p>}
         <div className="product-grid">
           {filtered.map((product) => (

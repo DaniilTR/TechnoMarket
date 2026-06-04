@@ -6,15 +6,15 @@ export default function Home() {
       <section className="hero">
         <div className="container hero__grid">
           <div>
-            <p className="eyebrow">PC Components Store</p>
-            <h1>Build faster, cooler, and smarter.</h1>
+            <p className="eyebrow">Магазин комплектующих</p>
+            <h1>Собирай быстрее, холоднее и умнее.</h1>
             <p className="lead">
-              Premium GPUs, CPUs, boards, storage, and cooling with real-time stock and
-              compatibility checks.
+              Премиальные видеокарты, процессоры, платы, накопители и охлаждение.
+              Актуальные запасы и проверка совместимости.
             </p>
             <div className="hero__actions">
-              <Link className="btn btn--primary" to="/catalog">Shop components</Link>
-              <Link className="btn btn--ghost" to="/bundles">Explore build kits</Link>
+              <Link className="btn btn--primary" to="/catalog">В магазин</Link>
+              <Link className="btn btn--ghost" to="/bundles">Наборы сборок</Link>
             </div>
             <div className="hero__stats">
               <div>
@@ -31,8 +31,8 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="hero__panel">
-            <h3>Featured build</h3>
+            <div className="hero__panel">
+            <h3>Рекомендуемая сборка</h3>
             <p>Creator Studio 2024</p>
             <ul>
               <li>RTX 4070 Super</li>
@@ -40,7 +40,7 @@ export default function Home() {
               <li>64GB DDR5</li>
               <li>2TB NVMe Gen4</li>
             </ul>
-            <Link className="btn btn--primary" to="/bundles">See bundles</Link>
+            <Link className="btn btn--primary" to="/bundles">Посмотреть наборы</Link>
           </div>
         </div>
       </section>
